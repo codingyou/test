@@ -16,7 +16,7 @@
 <p style="text-align:center; font-weight:bolder; font-size:10px; color:white;">Alpha v.0.2.0</p>
 <br>
 <br>
-<p style="text-align:center; font-weight:bolder; font-size:35px; color:white;">당신의 점수 | <span class="weight-300" id="score"></span>점 / <span class="weight-300" id="all"></span>점</p>
+<p style="text-align:center; font-weight:bolder; font-size:35px; color:white;">당신의 점수 | <span class="weight-300" id="score"></span>점 / <span class="weight-300" id="max"></span>점</p>
 <br>
 <p style="text-align:center; font-weight:bolder; font-size:35px; color:white;">맞춘 문제 | <span class="weight-300" id="count"></span>문제 / <span class="weight-300" id="all"></span>문제</p>
 <br>
@@ -26,19 +26,19 @@
 
 
 <script>
-
+// all - 문제 개수 / max - 문제 만점 / score 사용자 점수 / count 사용자 맞춘 점수
+	
+    document.getElementById("score").innerHTML = urlParams.get('a');
+    document.getElementById("count").innerHTML = urlParams.get('c');
+    document.getElementById("all").innerHTML = questions.length;
+    document.getElementById("max").innerHTML = max;
+	
     var max;
     max=0;
     for (var i = 0; i < questions.length; i++) {
         max += Math.abs(questions[i].effect.score)
     } 
 	
-    function init_question() {
-	document.getElementById("score").innerHTML = urlParams.get('a');
-        document.getElementById("count").innerHTML = urlParams.get('c');
-        document.getElementById("all").innerHTML = questions.length;
-
-    }
 
 	
     </script>
