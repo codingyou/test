@@ -29,16 +29,12 @@
 <br>
 
 <script>
-    var max;
-    max = 0;
+
     var score; // User's scores
     score = 0;
     var qn = 0; // Question number
     var prev_answer = null;
     init_question();
-       for (var i = 0; i < questions.length; i++) {
-        max += Math.abs(questions[i].effect.econ)
-    } 
 
     function init_question() {
         document.getElementById("answer1").innerHTML = questions[qn].a1;
