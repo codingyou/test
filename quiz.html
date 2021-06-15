@@ -34,6 +34,8 @@
     score = 0;
     var qn = 0; // Question number
     var prev_answer = null;
+    var count;
+    count = 0;
     init_question();
 
     function init_question() {
@@ -50,7 +52,8 @@
 
     function next_question(mult) {
         if(mult == questions[qn].effect.answer){
-            score += questions[qn].effect.score
+            score += questions[qn].effect.score;
+            count += 1;
         }
         qn++;
         if (qn < questions.length) {
@@ -63,6 +66,7 @@
     function results() {
         location.href = `results.html`
             + `?a=${(score)}`
+            + `?c=${(count)}`
     }
         
 </script>
