@@ -18,7 +18,7 @@
 <br>
 <p style="text-align:center; font-weight:bolder; font-size:35px; color:white;">당신의 점수 | <span class="weight-300" id="score"></span>점 / <span class="weight-300" id="max"></span>점</p>
 <br>
-<p style="text-align:center; font-weight:bolder; font-size:35px; color:white;">맞춘 문제 | <span class="weight-300" id="count"></span>문제 / <span class="weight-300" id="questions.length"></span>문제</p>
+<p style="text-align:center; font-weight:bolder; font-size:35px; color:white;">맞춘 문제 | <span class="weight-300" id="count"></span>문제 / <span class="weight-300" id="all"></span>문제</p>
 <br>
 <br>
 <<button class="small_button" onclick="location.href='index.html';">처음으로</button> <br>
@@ -48,7 +48,8 @@
 	
     document.getElementById("max").innerHTML = max;
     document.getElementById("score").innerHTML = score;
-    document.getElementById("count").innerHTML = count;
+    document.getElementById("count").innerHTML = count;    document.getElementById("all").innerHTML = questions.length;
+
 
 	
 
