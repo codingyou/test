@@ -16,11 +16,11 @@
 <p style="text-align:center; font-weight:bolder; font-size:25px; color:white;" id="question-number">Loading...</p>
 <br>
 <p style="font-size:25px", class="question" id="question-text"></p>
-<button class="button" onclick="next_question(1)" style="background-color: #272F61;">적극 동의함</button> <br>
-<button class="button" onclick="next_question(2)" style="background-color: #5F73F0;">동의함</button> <br>
-<button class="button" onclick="next_question(3)" style="background-color: #807E7C;">중립/모르겠다</button> <br>
-<button class="button" onclick="next_question(4)" style="background-color: #F04636;">동의하지 않음</button> <br>
-<button class="button" onclick="next_question(5)" style="background-color: #702019;">적극 반대함</button> <br>
+<button class="button" onclick="next_question(1)" style="background-color: ##222447;" id="answer1"></button> <br>
+<button class="button" onclick="next_question(2)" style="background-color: #414487;" id="answer1"></button> <br>
+<button class="button" onclick="next_question(3)" style="background-color: #5358AD;" id="answer1"></button> <br>
+<button class="button" onclick="next_question(4)" style="background-color: #5F65C7;" id="answer1"></button> <br>
+<button class="button" onclick="next_question(5)" style="background-color: #666BD4;" id="answer1"></button> <br>
 <br>
 <br>
 <br>
@@ -39,6 +39,11 @@
     } 
 
     function init_question() {
+        document.getElementById("answer1").innerHTML = questions[qn].a1;
+        document.getElementById("answer2").innerHTML = questions[qn].a2;
+        document.getElementById("answer3").innerHTML = questions[qn].a3;
+        document.getElementById("answer4").innerHTML = questions[qn].a4;
+        document.getElementById("answer5").innerHTML = questions[qn].a5;
         document.getElementById("question-text").innerHTML = questions[qn].question;
         document.getElementById("question-number").innerHTML = "문제 " + (qn + 1) + "/" + (questions.length);
     }
