@@ -254,6 +254,7 @@ questions = [
     },
     {
         "question": "다음 중 주권의 본질이 아닌 것은?",
+	            "effect": {
             "score" : 5,
             "answer" : 1
         },
