@@ -26,6 +26,11 @@
 
 
 <script>
+    var max;
+    max=0;
+    for (var i = 0; i < questions.length; i++) {
+        max += Math.abs(questions[i].effect.score)
+    } 
 	
     function getQueryVariable(variable)
     {
@@ -42,12 +47,11 @@
     count  = getQueryVariable("c");
 	
     document.getElementById("max").innerHTML = max;
+    document.getElementById("score").innerHTML = score;
+    document.getElementById("count").innerHTML = count;
+
 	
-    var max;
-    max=0;
-    for (var i = 0; i < questions.length; i++) {
-        max += Math.abs(questions[i].effect.score)
-    } 
+
 	
 
 	
